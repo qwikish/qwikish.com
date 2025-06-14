@@ -1,10 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { ThemeProvider } from "@/components/theme-provider"
+
 import './index.css'
 import App from './App.tsx'
+import RootLayout from './layouts/root-layout.tsx'
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <RootLayout>
+          <App />
+        </RootLayout>
+      </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
