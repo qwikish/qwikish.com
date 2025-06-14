@@ -1,5 +1,5 @@
 import Cta from "@/components/shared/landing/cta";
-import FeatureDashboard from "@/components/shared/landing/featres";
+import FeatureDashboard from "@/components/shared/landing/features";
 import Footer from "@/components/shared/landing/footer";
 import GradientBlobs from "@/components/shared/landing/hero-background";
 import HeroSection from "@/components/shared/landing/hero-section";
