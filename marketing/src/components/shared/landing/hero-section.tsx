@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
@@ -22,9 +23,12 @@ const HeroSection = () => {
                 Qwikish helps students take AI-powered notes, generate quizzes, track tasks, and connect with a motivated peer community — all in one beautifully simple workspace.
             </motion.p>
 
-            <Button className="px-8 py-3" size={"lg"}>
-                Get Started
-            </Button>
+
+            <Link to="/app">
+                <Button className="px-8 py-3" size={"lg"}>
+                    Get Started
+                </Button>
+            </Link>
             <div className="flex justify-center gap-6 mt-5 flex-wrap text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
