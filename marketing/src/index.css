@@ -97,7 +97,7 @@ html, body {
   --muted-foreground: oklch(0.7155 0 0);
   --accent: oklch(0.3372 0.0758 47.2167);
   --accent-foreground: oklch(0.9270 0.0553 73.2277);
-  --destructive: oklch(0.8688 0.1344 194.9642);
+  --destructive: oklch(0.5656 0.2293 28.9627);
   --destructive-foreground: oklch(1.0000 0 0);
   --border: oklch(0.3715 0 0);
   --input: oklch(0.3715 0 0);
@@ -180,4 +180,12 @@ html, body {
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
