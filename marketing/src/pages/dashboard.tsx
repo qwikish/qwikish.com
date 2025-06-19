@@ -25,8 +25,10 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useNavigate } from "react-router-dom";
 
 export default function MinimalDashboard() {
+    const navigate = useNavigate();
     // Stats data
     const stats = [
         { title: "Notes", value: 18, icon: BookOpen, change: "+3 this week", color: "text-blue-500", bg: "bg-blue-100" },
@@ -201,7 +203,9 @@ export default function MinimalDashboard() {
                             <Bell className="h-4 w-4" />
                             <span>Notifications</span>
                         </Button>
-                        <Button variant="outline" size="sm" className="gap-2">
+                        <Button 
+                        onClick={() => navigate("/app/settings")}
+                        variant="outline" size="sm" className="gap-2">
                             <Settings className="h-4 w-4" />
                             <span>Settings</span>
                         </Button>
